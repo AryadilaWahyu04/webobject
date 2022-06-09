@@ -1,0 +1,99 @@
+.odet {
+  text-align: center;
+}
+.deskripsi {
+    font-size: 18px;
+}
+.container {
+  margin-top: 10px;
+  display : flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container2 {
+  margin-top: 10px;
+  display : flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container3 {
+  margin-top: 10px;
+  display : flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  width : 300px;
+  height: 420px;
+  padding-top: 20px;
+  margin:100px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: white;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: grey;
+}
+.detail:hover {
+  color: white;
+}
+.card a {
+  background-color: white;
+  color: black;
+  padding: 10px 10px;
+  display: block;
+  text-align: center;
+  margin: 35px 25px;
+  text-decoration: none;
+  border-style: solid;
+}
+.button{
+  display:block;
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
+  opacity: 0;
+  visibility: visible;
+}
+.button a:hover {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 1s ease;
+}
+
+.judul {
+  text-align: center;
+}
+.keterangan {
+  margin-left: 30px;
+  font-size: 20px;
+  margin-right: 30px;
+}
+.form {
+  margin-left: 30px;
+  font-size: 20px;
+  margin-right: 30px;
+}
+.video {
+  width: 500px;
+  height: 500px;
+  margin-left: 30%;
+}
+.biodata {
+  margin-left: 10px;
+  font-size: 20px;
+  text-align: left;
+  justify-content: left;
+}
+.judulbio {
+  font-weight: bold;
+}
+.bio{
+  text-align: center;
+  justify-content: center;
+}

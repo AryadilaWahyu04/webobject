@@ -1,0 +1,172 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family: 'Times New Roman';
+  font-weight: bold;
+  font-size: 25px;
+  background-color: #ACF8FC;
+}
+a, a:hover{
+  text-decoration: none;
+}
+nav{
+  background:rgb(25, 0, 248);
+  font-weight: bold;
+  z-index: 999;
+  padding: 5px 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+nav a{
+  color: rgb(255, 255, 255);
+}
+nav a:hover{
+  color: rgb(253, 2, 2);
+}
+.logo {
+  flex:1;
+}
+.logo a {
+  display: flex;
+  align-items:center;
+  font-size:20px;
+}
+.logo img{
+  width: 50px;
+  margin-right: 10px;
+}
+.menu {
+  display: flex;
+  align-items:center;
+  list-style: none;
+}
+.menu li {
+  padding: 15px 15px;
+  font-size:22px;
+}
+.toggle{
+  position: absolute;
+  font-size: 30px;
+  display: none;
+}
+.odet {
+  text-align: center;
+}
+.deskripsi {
+    font-size: 18px;
+}
+.container {
+  margin-top: 10px;
+  display : flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container2 {
+  margin-top: 10px;
+  display : flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container3 {
+  margin-top: 10px;
+  display : flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  width : 300px;
+  height: 420px;
+  padding-top: 20px;
+  margin:100px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: white;
+  border : solid white;
+  border-radius: 5px;
+}
+.detail:hover {
+  color: white;
+}
+.card a {
+  background-color: white;
+  color: black;
+  padding: 10px 10px;
+  display: block;
+  text-align: center;
+  margin: 35px 25px;
+  text-decoration: none;
+  border-style: solid;
+  border-color: black;
+}
+.button{
+  display:block;
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
+  opacity: 0;
+  visibility: visible;
+}
+.button a:hover {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 1s ease;
+}
+
+.judul {
+  text-align: center;
+}
+.keterangan {
+  margin-left: 30px;
+  font-size: 20px;
+}
+.form {
+  margin-left: 30px;
+  font-size: 20px;
+}
+.video {
+  width: 500px;
+  height: 500px;
+  margin-left: 30%;
+}
+.biodata {
+  margin-left: 10px;
+  font-size: 20px;
+  text-align: left;
+  justify-content: left;
+}
+.judulbio {
+  font-weight: bold;
+}
+.bio{
+  text-align: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+      display: block;
+      position: relative;
+      padding: 15px 20px;
+  }
+  .menu {
+      margin-top :15px;
+      display:none;
+  }
+  .menu.active, .toggle {
+      display: block;
+  }
+  .toggle {
+      position: absolute;
+      top: 15px;
+      right:20px;
+  }
+}

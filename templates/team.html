@@ -1,0 +1,455 @@
+<!--HTML-->
+<!--referensi card:https://www.youtube.com/watch?v=qXRYMdvq_Dc-->
+<html>
+  <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Object Detection</title>
+    <link rel="stylesheet" type="text/css" href="static/style/style.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for ('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+
+<body style = "background-color:#D4FFFF">
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="{{url_for ('index')}}"><img src="static/images/Logo.png" style="width:65px; height:65px"></a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="{{url_for ('index')}}">Beranda</a></li>
+        <li><a href="deskripsi">Scan</a></li>
+        <li><a href="team">Team</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+  
+  <br> </br>
+  <div class="Deskripsi">
+  <h1 style="text-align:center"> Tentang Kami</h1>
+  <br> </br>
+  <p class="keterangan"> Kami adalah sebuah kelompok gabungan yang berasal dari 4 orang kelas Al-Khawarizmi dan 1 orang kelas Artemis. kelompok ini dibuat dengan tujuan untuk menyelesaikan projek akhir berbasis Artificial Intelligence dalam program Magang dan Studi Independen Bersertifikat (MSIB) di mitra PT Orbit Future Academy
+  </p>
+  </div>
+
+  <section class="container">
+    <div class = "card">
+      <h3> Leader Project</h3>
+      <img src="static/images/Mumu_Mujtahid.png" style="margin:20px 20px 50px 50px; height:200px; width:200px;">
+      <h3>Mumu Mujtahid Fatwa</h3>
+      <p style="font-size:16px;">Universitas Gadjah Mada</p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalMumu" style="margin:15px 15px 20px 20px;">
+        Detail
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="ModalMumu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Tentang Saya</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2> Leader Project </h2>
+              <img src="static/images/Mumu_Mujtahid.png" style="height: 200px; width: 200px;">
+              <h2> Mumu Mujtahid Fatwa</h2>
+              <br> </br>
+              <form class="biodata">
+                <label class="judulbio">Tempat Tanggal Lahir :</label>
+                <p>Pandeglang, 10 Oktober 2000</p>
+                <label class="judulbio" >Asal Universitas :</label>
+                <p>Universitas Gadjah Mada</p>
+                <label class="judulbio">Program Studi :</label>
+                <p>Kimia</p>
+                <label class="judulbio">Fakultas :</label>
+                <p>MIPA</p>
+                <label class="judulbio">Moto Hidup:</label>
+                <p class="bio">"1% lebih baik dalam keseharian hidup dapat mengubah garis besar kesuksesan."</p>
+              </form>
+              <section>
+                <a href="https://wa.me/+6289527544763"><img src="static/images/whatsapp.png" style="height:60px; width:60px;"></a>
+                <a href="https://www.instagram.com/mujtahidfatwa_21/"><img src="static/images/instagram.png" style="height:60px; width:60px;" margin="0 0 15px 15px" ></a>
+                <a href="https://www.linkedin.com/in/mumu-mujtahid-fatwa-59981b193/"><img src="static/images/linkedin.png" style="height:60px; width:60px; "></a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container2">
+    <div class = "card">
+      <h3> Programmer</h3>
+      <img src="static/images/Wahyu_Arya.png" style="margin:20px 20px 50px 50px; height:200px; width:200px;">
+      <h3>Wahyu Aryadila</h3>
+      <p style="font-size:16px;">Universitas Amikom Purwokerto</p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalWahyu" style="margin:15px 15px 20px 20px;">
+        Detail
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="ModalWahyu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Tentang Saya</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2> Programmer </h2>
+              <img src="static/images/Wahyu_Arya.png" style="height: 200px; width: 200px;">
+              <h2> Wahyu Aryadila</h2>
+              <br> </br>
+              <form class="biodata">
+                <label class="judulbio">Tempat Tanggal Lahir :</label>
+                <p> Jakarta, 11 Juni 2001</p>
+                <label class="judulbio" >Asal Universitas :</label>
+                <p>Universitas Amikom Purwokerto</p>
+                <label class="judulbio">Program Studi :</label>
+                <p>Teknologi Informasi</p>
+                <label class="judulbio">Fakultas :</label>
+                <p>Ilmu Komputer</p>
+                <label class="judulbio">Moto Hidup:</label>
+                <p class="bio">"A mistake that make you humble is better than an achievement makes you arogant"</p>
+              </form>
+              <section>
+                <a href="https://wa.me/+6285643571986"> <img src="static/images/whatsapp.png" style="height:60px; width:60px;"> </a>
+                <a href="https://www.instagram.com/wahyu_aryadila/"><img src="static/images/instagram.png" style="height:60px; width:60px;" margin="0 0 15px 15px"></a>
+                <a href="https://www.linkedin.com/in/aryadila-wahyu-7139621b0/"><img src="static/images/linkedin.png" style="height:60px; width:60px; "></a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "card">
+      <h3> UX Research</h3>
+      <img src="static/images/siska_Tawari.png" style="margin:20px 20px 50px 50px; height:200px; width:200px;">
+      <h3>Siska Tawari</h2>
+      <p style="font-size: 16px;">Universitas Negeri Jakarta</p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalSiska" style="margin:15px 15px 20px 20px;">
+        Detail
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="ModalSiska" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Tentang Saya</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2> UX Research </h2>
+              <img src="static/images/siska_Tawari.png" style="height: 200px; width: 200px;">
+              <h2> Siska Tawari</h2>
+              <br> </br>
+              <form class="biodata">
+                <label class="judulbio">Tempat Tanggal Lahir :</label>
+                <p>Jakarta,31 Mei 2000</p>
+                <label class="judulbio" >Asal Universitas :</label>
+                <p>Universitas Negeri Jakarta</p>
+                <label class="judulbio">Program Studi :</label>
+                <p>Pendidikan Teknik Elektronika</p>
+                <label class="judulbio">Fakultas :</label>
+                <p>Teknik</p>
+                <label class="judulbio">Moto Hidup:</label>
+                <p class="bio">"Orang bodoh belajar pintar, orang pintar tidak belajar bodoh"</p>
+              </form>
+              <section">
+                <a href = "https://wa.me/+6283819045550"><img src="static/images/whatsapp.png" style="height:60px; width:60px;"></a>
+                <a href = "https://www.instagram.com/siska_tawari/"><img src="static/images/instagram.png" style="height:60px; width:60px;" margin="0 0 15px 15px" ></a>
+                <a href = "https://www.linkedin.com/in/siska-t-0140a5114/"><img src="static/images/linkedin.png" style="height:60px; width:60px; "></a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container3">
+    <div class = "card">
+      <h3>Data Collecting </h3>
+      <img src="static/images/Eka_Apri.png" style="margin:20px 20px 50px 50px; height:200px; width:200px;">
+      <h3>Eka Apri Setyawan</h3>
+      <p style="font-size: 16px;">UPN "Veteran" Yogyakarta</p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalEka" style="margin:15px 15px 20px 20px;">
+        Detail
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="ModalEka" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Tentang Saya</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2> Data Collecting </h2>
+              <img src="static/images/Eka_Apri.png" style="height: 200px; width: 200px;">
+              <h2> Eka Apri Setyawan</h2>
+              <br></br>
+              <form class="biodata">
+                <label class="judulbio">Tempat Tanggal Lahir :</label>
+                <p>Wonosobo, 10 April 2001</p>
+                <label class="judulbio" >Asal Universitas :</label>
+                <p>UPN "Veteran" Yogyakarta</p>
+                <label class="judulbio">Program Studi :</label>
+                <p>Ilmu Tanah</p>
+                <label class="judulbio">Fakultas :</label>
+                <p>Pertanian</p>
+                <label class="judulbio">Moto Hidup:</label>
+                <p class="bio">"Berhenti memikirkan hal-hal di luar kendari diri sendiri"</p>
+              </form>
+              <section>
+                <a href ="https://wa.me/+6282235945781"><img src="static/images/whatsapp.png" style="height:60px; width:60px;"></a>
+                <a href ="https://www.instagram.com/eka_a_s/"><img src="static/images/instagram.png" style="height:60px; width:60px;" margin =" 0 0 15px 15px"> </a>
+                <a href ="https://linkedin.com"><img src="static/images/linkedin.png" style="height:60px; width:60px; "></a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "card">
+      <h3> UI Designer</h3>
+      <img src="static/images/Dyan_Surya.png" style="margin:20px 20px 50px 50px; height:200px; width:200px;">
+      <h3>Dyan Surya</h3>
+      <p style="font-size:16px ;">Universitas Negeri Semarang</p>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalDyan" style="margin:15px 15px 20px 20px;">
+        Detail
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="ModalDyan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Tentang Saya</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2> UI Designer </h2>
+              <img src="static/images/Dyan_Surya.png" style="height: 200px; width: 200px;">
+              <h2> Dyan Surya Firmansyah</h2>
+              <br> </br>
+              <form class="biodata">
+                <label class="judulbio">Tempat Tanggal Lahir :</label>
+                <p>Kendal, 13 Oktober 1999</p>
+                <label class="judulbio" >Asal Universitas :</label>
+                <p>Universitas Negeri Semarang</p>
+                <label class="judulbio">Program Studi :</label>
+                <p>Ilmu Keolahragaan</p>
+                <label class="judulbio">Fakultas :</label>
+                <p>Ilmu Keolahragaan</p>
+                <label class="judulbio">Moto Hidup:</label>
+                <p class="bio">"Usaha, Jangan Malas"</p>
+              </form>
+              <section>
+                <a href="https://wa.me/+62895344542163"><img src="static/images/whatsapp.png" style="height:60px; width:60px;"></a>
+                <a href="https://www.instagram.com/dyan_syr/"><img src="static/images/instagram.png" style="height:60px; width:60px;" margin="0 0 15px 15px" ></a>
+                <a href="https://linkedin.com"><img src="static/images/linkedin.png" style="height:60px; width:60px; "></a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.content{
+  max-width: 100%;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: #D4D6D7;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.navbar .logo a{
+  margin-right: 800px;
+  color: #fff;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #007bff;
+}
+.banner{
+  background: url("banner.jpg") no-repeat;
+  height: 20vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about{
+  padding: 30px 0;
+}
+.about .title{
+  font-size: 38px;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: grey;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
+}
+</style>
